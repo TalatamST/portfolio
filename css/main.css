@@ -7,7 +7,7 @@
 
 .navbar {
     width: 100%;
-    background-color: #4557BF;
+    background-color: #6DBFF2;
     overflow: auto;
 }
 
@@ -15,7 +15,7 @@
 /* Style the navigation menu */
 .navbar {
     width: 100%;
-    background-color: #4557BF;
+    background-color: #6DBFF2;
     overflow: auto;
 }
 
@@ -35,7 +35,7 @@
 
 /* Add a background color on mouse-over */
 .navbar a:hover {
-    background-color: #000;
+    background-color: #4557BF;
 }
 
 /* Style the current/active link */
@@ -66,7 +66,7 @@
     padding: 10px;
     border-width: 10px;
     border-radius: 30px;
-    border-color: #6DBFF2;
+    border-color: #4557BF;
     border-style: solid;
 
 }
@@ -82,7 +82,7 @@
     text-align: left;
     border-width: 10px;
     border-radius: 30px;
-    border-color: #6DBFF2;
+    border-color: #4557BF;
     border-style: solid;
     background-color: #F2BE22;
 }
