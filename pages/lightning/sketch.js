@@ -7,6 +7,7 @@ var endY = 0;
 var photo = new Array();
 var photoIndex = 0;
 var img;
+var mouseP=false;
 
 function preload() {
     photo[0] = loadImage("data/one.png");
@@ -21,7 +22,7 @@ function preload() {
     }
 
     function draw() {
-        if (mousePressed == true) {
+        if (mouseP == true) {
 
             if (frameCount % 1 == 0) {
                 reset();
@@ -42,8 +43,12 @@ function preload() {
     }
 
     function mousePressed() {
+        mouseP=true;
         photoIndex = photoIndex == photo.length - 1 ? 0 : photoIndex + 1;
         reset();
+    }
+    function mouseReleased(){
+        mouseP=false;
     }
 
     function reset() {
