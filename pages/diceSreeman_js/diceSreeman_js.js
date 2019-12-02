@@ -3,7 +3,8 @@ var total = 0;
 
 function setup() {
     noLoop();
-    createCanvas(500, 500);
+    var canvas = createCanvas(500, 500);
+    canvas.parent('sketch-div');
     dice = [];
     ellipseMode(CENTER);
     for (var i = 0; i < 3; i++) {
@@ -25,11 +26,7 @@ function draw() {
         if (mousePressed) {
             die.roll();
         }
-
-
     }
-
-
 }
 
 function mousePressed() {
