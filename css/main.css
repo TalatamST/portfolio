@@ -46,32 +46,30 @@
 #bannerimg {
     width: 100%;
     height: auto;
+    transition: 0.2s;
 }
 
 #bar {
-    height;
-    300px;
-    width;
-    100%;
+    height: 300px;
+    width: 100%;
     background-color: black;
 }
 
 .pic {
-    position: absolute;
-    width: 20%;
-    margin: 3rem;
-    top: 600px;
-    right: 50px;
+    display: flex;
+    width: auto;
+    height: 200px;
+    margin: 10px;
     padding: 10px;
     border-width: 10px;
     border-radius: 30px;
     border-color: #4557BF;
     border-style: solid;
-
+    background-color: #F2BE22;
 }
 
 .container{
-    text-align:center;
+    text-align: center;
 }
 
 .box {
@@ -92,12 +90,12 @@
 }
 
 .flex-container {
+    justify-content: center;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     flex-direction: row;
     justify-content: flex-end;
     align-items: stretch;
-    border: 5px solid #42352c;
 }
 .child0 {
     flex-basis: 20%;
