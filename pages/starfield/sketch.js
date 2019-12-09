@@ -1,8 +1,6 @@
 'use strict';
 
 var pArray = new Array();
-var pArray1 = new Array();
-var pArray2 = new Array();
 var mode = 0;
 
 function setup() {
@@ -11,11 +9,10 @@ function setup() {
 
     pArray[0] = new Jumbo();
     for (var i = 1; i < 11; i++) {
-        pArray1[i] = new OddSquad();
+        pArray[i] = new OddSquad();
     }
-    for (var i = 11; i < 100; i++) {
-
-        pArray2[i] = new Normal();
+    for (var i = 11; i < 1000; i++) {
+        pArray[i] = new Normal();
     }
 }
 
@@ -25,21 +22,13 @@ function draw() {
         pArray[i].show();
         pArray[i].move();
     }
-    for (var i = 0; i < pArray1.length; i++) {
-        pArray1[i].show();
-        pArray1[i].move();
-    }
-    for (var i = 0; i < pArray2.length; i++) {
-        pArray2[i].show();
-        pArray2[i].move();
-    }
     if (frameCount % 120 == 0)
         mode += mode == 6 ? -6 : 1;
 }
 
 class Normal {
 
-    contructor() {
+    constructor() {
         //    this.x=width/2;
         //    this.y=height/2;
         this.x = Math.floor((Math.random() * 1000) + 20);
@@ -110,9 +99,9 @@ class Normal {
 
     show() {
         noStroke();
-
-        //colorMode(HSB);
-        // fill(this.r, this.g, this.b);
+        this.randColor();
+        colorMode(HSB, 100);
+        fill(this.r, this.g, this.b);
         ellipse(this.x, this.y, 2, 2);
     }
 
@@ -213,7 +202,7 @@ class OddSquad {
 
 class Jumbo {
 
-    contructor() {
+    constructor() {
         //    this.x=width/2;
         //    this.y=height/2;
         //super();
@@ -272,6 +261,8 @@ class Jumbo {
                 this.y += Math.tan(this.angle) * this.speed;
                 this.yOffset = Math.sin(this.angle) * 150;
                 this.xOffset = Math.cos(this.angle) * 60;
+                textAlign(CENTER, CENTER);
+                text("SpEeD", this.x, this.y);
                 break;
             case 6:
                 this.x += Math.cos(this.angle) * this.speed;

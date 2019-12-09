@@ -94,7 +94,7 @@
     display: flex;
     flex-flow: row wrap;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-center;
     align-items: stretch;
 }
 .child0 {

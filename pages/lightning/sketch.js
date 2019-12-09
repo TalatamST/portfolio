@@ -17,7 +17,7 @@ function preload() {
 
     function setup() {
         var canvas = createCanvas(800, 500);
-    canvas.parent('sketch-div');
+        canvas.parent('sketch-div');
         strokeWeight(8);
 
     }
